@@ -66,6 +66,9 @@ LOCAL_MODULE:= dltest
 
 LOCAL_SHARED_LIBRARIES := libdl
 
+# Disable link time optimization here so we may enable it globally
+LOCAL_CFLAGS += -fno-lto
+
 include $(BUILD_EXECUTABLE)
 
 endif
